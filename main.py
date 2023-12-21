@@ -18,7 +18,7 @@ class snakeCVclass:
         self.length = []                                                                    #Distance between points
         self.currentLength = 0                                                              #Total snake length
         self.TotalAllowedLength = 150                                                       #Total allowed length
-        self.headPrevious = 0, 0                                                            #Previous head point
+        self.headPrevious = 0, 0                                                            #Previous head point.
         
         #Food initialization
         self.foodIMG = cv2.imread(foodPath, cv2.IMREAD_UNCHANGED)                           #import the food image
