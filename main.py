@@ -18,14 +18,14 @@ class snakeCVclass:
         self.length = []                                                                    #Distance between points
         self.currentLength = 0                                                              #Total snake length
         self.TotalAllowedLength = 150                                                       #Total allowed length
-        self.headPrevious = 0, 0                                                            #Previous head point
+        self.headPrevious = 0, 0                                                            #Previous head point.
         
         #Food initialization
         self.foodIMG = cv2.imread(foodPath, cv2.IMREAD_UNCHANGED)                           #import the food image
         self.foodHeight, self.foodWidth,_ = self.foodIMG.shape                              #setting the food height and width based on the foodimg shape
         self.foodLocation = 0, 0                                                            #food location (or points)
         self.FoodLocationRandom()                                                           #initialize the random function
-        self.score = 0                                                                      #score
+        self.score = 0                                                                      #Game Score
         self.gameOver = False                                                               #see if the game is over
 
     #set the food location
