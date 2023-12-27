@@ -10,7 +10,7 @@ capture = cv2.VideoCapture(0)
 capture.set(3, 1280)
 capture.set(4, 720)
 
-detect = HandDetector(detectionCon = 0.8,maxHands = 1)
+detect = HandDetector(detectionCon = 0.8 ,maxHands = 1)
 
 class snakeCVclass:
     def __init__(self, foodPath):
@@ -35,9 +35,8 @@ class snakeCVclass:
     def update(self, mainIMG, headCurrent):
 
         if self.gameOver:
-            cvzone.putTextRect(mainIMG, "Game Over", [250, 350], scale = 8, thickness = 4 , offset = 20)
-            cvzone.putTextRect(mainIMG, f'Your Score :{self.score}', [250, 500], scale = 8, thickness = 5 , offset = 20)
-
+            cvzone.putTextRect(mainIMG, "Game Over", [250, 350], scale=8, thickness=4, colorT=(255, 255, 255), colorR=(0, 0, 255), offset=20)
+            cvzone.putTextRect(mainIMG, f'Your Score: {self.score}', [250, 500], scale=8, thickness=5, colorT=(255, 255, 255), colorR=(0, 0, 255), offset=20)
         else:
             # Break down the previous and current points location to x and y
             previousX, previousY = self.headPrevious
